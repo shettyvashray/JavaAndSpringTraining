@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="cust1" class="com.trial.Customer" scope="singleton" init-method="initCust" destroy-method="destroyCust">
+		<constructor-arg name="custid" value="101"></constructor-arg>
+		<constructor-arg name="custname" value="Suraj"></constructor-arg>
+		<constructor-arg name="custbill" value="5000"></constructor-arg>
+	</bean>
+
+	<bean id="prod1" class="com.trial.Product">
+		<property name="prodid" value="459"></property>
+		<property name="prodname" value="Toy"></property>
+		<property name="prodcost" value="500"></property>
+
+	</bean>
+</beans>
